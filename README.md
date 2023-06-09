@@ -1,10 +1,14 @@
 # permission_manager.sh
 
-## info
-
 BASH 파일/디렉터리 퍼미션 변경기입니다. <br>
-chmod 명령어 대신 아주 귀찮은 방법으로 퍼미션을 변경하도록 도와줍니다.
+chmod 명령어가 익숙하지 않은 경우 사용할 수 있습니다.
 
-## screenshot
+## run
+```
+bash permission_manager.sh [file_path]
+```
 
-![permission](https://user-images.githubusercontent.com/75349747/150001934-72b867bb-93ed-4f58-a663-5fb7bb5368e2.PNG)
+## install
+```
+bash install.sh
+```
