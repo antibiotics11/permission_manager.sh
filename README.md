@@ -9,7 +9,7 @@ bash permission_manager.sh [file_path]
 ```
 
 ## 설치
-인스톨러를 실행하면 사용자 계정에 
+인스톨러를 실행하면 사용자 계정에 스크립트를 설치합니다.
 ```
 bash install.sh
 ```
