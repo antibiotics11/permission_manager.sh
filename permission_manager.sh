@@ -138,7 +138,7 @@ function verify_input_yn {
 
 	local input=$1
 	case $input in 
-		y | Y | yes | Yes | YES | ok)
+		[yY] | [yY][eE][sS] | [oO][kK])
 			echo 1;;
 		*)
 			echo 0;;
@@ -170,7 +170,7 @@ function verify_path {
 function print_script_info {
 	
 	local repository="https://github.com/antibiotics11/permission_manager.sh"
-	echo -e "\e[99m\e[44mpermission_manager.sh v2.0                            \e[0m"
+	echo -e "\e[99m\e[44mBash Permission Manager                               \e[0m"
 	echo -e "\e[99m\e[44m\e]8;;"$repository"\a"$repository"\e]8;;\a\e[0m"
 	echo -e ""
 	
@@ -185,12 +185,12 @@ function print_message {
 # 오류 메시지 출력시 출력 형식 지정
 function print_error_message {
 	local message=$1
-	echo -e "\e[91mERROR: "$message"\e[0m"
+	echo -e "\e[91m"$message"\e[0m"
 }
 
 # 인터럽트 발생시 스크립트 종료
 function handle_interrupt {
-	local message="퍼미션이 변경되지 않았습니다. 실행을 종료합니다.";
+	local message="\n퍼미션이 변경되지 않았습니다.";
 	print_error_message "$message"
 	exit
 }
